@@ -11,6 +11,7 @@ public class Bcrypt3 {
     }
 
     public String hasher () {
-        return BCrypt.hashpw(password, BCrypt.gensalt(10));
+        hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt(10));
+        return hashedPassword;
     }
 }
