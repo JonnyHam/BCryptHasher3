@@ -17,7 +17,7 @@ public class MD5 {
         //System.out.println(this.encryptString(password, type));
         return hashedPassword.equals(this.encryptString(password, type));
     }
-
+    /*
     public static void main(String[] args) throws NoSuchAlgorithmException {
         MD5 encryptor = new MD5();
 
@@ -28,4 +28,5 @@ public class MD5 {
         System.out.println(hashedPassword);
         System.out.println(encryptor.checkString(password, type, hashedPassword));
     }
+     */
 }
