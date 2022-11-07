@@ -10,6 +10,11 @@ public class Bcrypt3 {
 
     }
 
+    public Bcrypt3 (String p, String h) {
+        password = p;
+        hashedPassword = h;
+    }
+
     public void inputPassword (String p) {
         password = p;
     }
