@@ -3,7 +3,10 @@ package com.example.BCryptHasher3;
 public class Runner3 {
     public static void main (String[] args) {
         String pTest = "monkey123";
-        Bcrypt3 test = new Bcrypt3(pTest);
-        System.out.println(test.hasher());
+        Bcrypt3 test = new Bcrypt3();
+        test.inputPassword(pTest);
+        test.hashPassword();
+        System.out.println(test.getHashedPassword());
+        System.out.println(test.checkHash());
     }
 }
