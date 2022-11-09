@@ -9,7 +9,7 @@ public class RunnerMain {
         String password = "matthew";
         //type: can do MD5, SHA-256, and BCrypt
         String type = "BCrypt";
-        if (type.equals("BCrypt")) {
+        if (!(type.equals("BCrypt"))) {
             String hashedPassword = encryptor.encryptString(password, type);
             System.out.println(hashedPassword);
             System.out.println(encryptor.checkString(password, type, hashedPassword));
