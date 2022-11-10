@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 
-public class MD5 {
+public class SHAMD5 {
     public String encryptString (String input, String type) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(type);
         byte[] messageDigest = md.digest(input.getBytes());
