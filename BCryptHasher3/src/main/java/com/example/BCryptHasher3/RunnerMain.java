@@ -4,25 +4,11 @@ import java.security.NoSuchAlgorithmException;
 
 public class RunnerMain {
     public static void main (String[] args) throws Exception {
-        /*
-        SHAMD5 encryptor = new SHAMD5();
 
-        String password = "matthew";
-        //type: can do MD5, SHA-256, and BCrypt
-        String type = "BCrypt";
-        if (!(type.equals("BCrypt"))) {
-            String hashedPassword = encryptor.encryptString(password, type);
-            System.out.println(hashedPassword);
-            System.out.println(encryptor.checkString(password, type, hashedPassword));
-        } else {
-            Bcrypt3 test = new Bcrypt3();
-            test.inputPassword(password);
-            test.hashPassword();
-            System.out.println(test.getHashedPassword());
-            System.out.println(test.checkHash());
-        }
-        */
         PasswordChecker test = new PasswordChecker();
-        System.out.print(test.checkHash("df0349ce110b69f03b4def8012ae4970"));
+        //MD5
+        System.out.println(test.checkHash("df0349ce110b69f03b4def8012ae4970"));
+        //SHA-256
+        System.out.println(test.checkHash("82968e1da9cf580682e99ae94d78688d89684c0872e901c8b60cde135cd5369"));
     }
 }

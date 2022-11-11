@@ -5,9 +5,9 @@ import java.util.*;
 public class PasswordReader {
     private ArrayList<String> passwords;
     public ArrayList<String> readPasswords (String type) throws Exception {
-        passwords = new ArrayList<String>();
+        passwords = new ArrayList<>();
         File file = new File(
-                "C:\\Users\\100117545\\Downloads\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10K" + type + ".txt");
+                "C:\\Users\\Jonathan Kim\\IdeaProjects\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10K" + type + ".txt");
 
         // Note:  Double backquote is to avoid compiler
         // interpret words
