@@ -3,7 +3,8 @@ package com.example.BCryptHasher3;
 import java.security.NoSuchAlgorithmException;
 
 public class RunnerMain {
-    public static void main (String[] args) throws NoSuchAlgorithmException {
+    public static void main (String[] args) throws Exception {
+        /*
         SHAMD5 encryptor = new SHAMD5();
 
         String password = "matthew";
@@ -20,13 +21,8 @@ public class RunnerMain {
             System.out.println(test.getHashedPassword());
             System.out.println(test.checkHash());
         }
-        /*
-        String pTest = "monkey123";
-        Bcrypt3 test = new Bcrypt3();
-        test.inputPassword(pTest);
-        test.hashPassword();
-        System.out.println(test.getHashedPassword());
-        System.out.println(test.checkHash());
-         */
+        */
+        PasswordChecker test = new PasswordChecker();
+        System.out.print(test.checkHash("df0349ce110b69f03b4def8012ae4970"));
     }
 }

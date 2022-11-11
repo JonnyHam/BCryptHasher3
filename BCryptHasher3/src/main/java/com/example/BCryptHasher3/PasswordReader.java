@@ -1,13 +1,13 @@
 package com.example.BCryptHasher3;
 import java.io.*;
-
+import java.util.*;
 
 public class PasswordReader {
-    private String passwords;
-    public String readPasswords () throws Exception {
-        passwords = "";
+    private ArrayList<String> passwords;
+    public ArrayList<String> readPasswords (String type) throws Exception {
+        passwords = new ArrayList<String>();
         File file = new File(
-                "C:\\Users\\100117545\\Downloads\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10KPass.txt");
+                "C:\\Users\\100117545\\Downloads\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10K" + type + ".txt");
 
         // Note:  Double backquote is to avoid compiler
         // interpret words
@@ -21,15 +21,15 @@ public class PasswordReader {
         String st;
         // Condition holds true till
         // there is character in a string
-        while ((st = br.readLine()) != null)
-            passwords += st + " ";
-            // Print the string
-            System.out.println(st);
+        while ((st = br.readLine()) != null) {
+            passwords.add(st);
+        }
+
         return passwords;
     }
     public static void main (String[] args) throws Exception {
         File file = new File(
-                "C:\\Users\\100117545\\Downloads\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10KPass.txt");
+                "C:\\Users\\100117545\\Downloads\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10KPlain.txt");
 
         // Note:  Double backquote is to avoid compiler
         // interpret words
