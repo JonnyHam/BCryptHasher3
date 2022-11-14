@@ -9,11 +9,11 @@ public class PasswordChecker {
     private ArrayList<String> MD5s;
     private ArrayList<String> SHAs;
 
-    public PasswordChecker() throws Exception {
+    public PasswordChecker(String user) throws Exception {
         PasswordReader test = new PasswordReader();
-        plaintexts = test.readPasswords("Plain");
-        MD5s = test.readPasswords("MD5");
-        SHAs = test.readPasswords("SHA256");
+        plaintexts = test.readPasswords("Plain", user);
+        MD5s = test.readPasswords("MD5", user);
+        SHAs = test.readPasswords("SHA256", user);
     }
 
     public String checkHash (String hash) throws Exception {

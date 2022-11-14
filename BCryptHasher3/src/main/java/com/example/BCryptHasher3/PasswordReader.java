@@ -4,10 +4,10 @@ import java.util.*;
 
 public class PasswordReader {
     private ArrayList<String> passwords;
-    public ArrayList<String> readPasswords (String type) throws Exception {
+    public ArrayList<String> readPasswords (String type, String user) throws Exception {
         passwords = new ArrayList<>();
         File file = new File(
-                "C:\\Users\\Jonathan Kim\\IdeaProjects\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10K" + type + ".txt");
+                "C:\\Users\\" + user + "\\IdeaProjects\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10K" + type + ".txt");
 
         // Note:  Double backquote is to avoid compiler
         // interpret words
@@ -27,6 +27,7 @@ public class PasswordReader {
 
         return passwords;
     }
+    /*
     public static void main (String[] args) throws Exception {
         File file = new File(
                 "C:\\Users\\100117545\\Downloads\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\10KPlain.txt");
@@ -48,4 +49,5 @@ public class PasswordReader {
             // Print the string
             System.out.println(st);
     }
+     */
 }

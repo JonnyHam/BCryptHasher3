@@ -5,7 +5,7 @@ import java.security.NoSuchAlgorithmException;
 public class RunnerMain {
     public static void main (String[] args) throws Exception {
 
-        PasswordChecker test = new PasswordChecker();
+        PasswordChecker test = new PasswordChecker("100117545");
         //MD5
         System.out.println(test.checkHash("df0349ce110b69f03b4def8012ae4970"));
         //SHA-256
