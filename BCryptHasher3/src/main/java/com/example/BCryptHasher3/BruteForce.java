@@ -1,11 +1,13 @@
 package com.example.BCryptHasher3;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.*;
 
 public class BruteForce {
     private String type;
     private String hash;
-    private String plain;
+    private ArrayList<Integer> plain;
+    private String plainString;
     private boolean cracked;
     public BruteForce (String h, String t) {
         hash = h;
@@ -16,12 +18,21 @@ public class BruteForce {
         SHAMD5 test = new SHAMD5();
 
         cracked = false;
-        plain = "a";
+        plain = new ArrayList<>();
+        plain.add((int)('a'));
         while (!cracked) {
-            if (test.checkString(plain, "MD5", hash) || test.checkString(plain, "SHA-256", hash)) {
+            plainString = "";
+            for (int i = 0; i < plain.size(); i++) {
+                plainString += (char)((int)plain.get(i));
+            }
+            if (test.checkString(plainString, "MD5", hash) || test.checkString(plainString, "SHA-256", hash)) {
+                cracked = true;
+            } else {
 
             }
         }
         return "";
     }
+
+
 }
