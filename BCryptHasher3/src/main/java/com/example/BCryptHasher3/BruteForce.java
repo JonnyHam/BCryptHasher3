@@ -13,6 +13,10 @@ public class BruteForce {
     public BruteForce (String h, String t) {
         hash = h;
         type = t;
+        plain = new ArrayList<>();
+        for(int i=0;i<10;i++){
+            plain.add(i);
+        }
     }
 
     public String bruteForceAttack () throws NoSuchAlgorithmException {
@@ -29,10 +33,10 @@ public class BruteForce {
             if (test.checkString(plainString, "MD5", hash) || test.checkString(plainString, "SHA-256", hash)) {
                 cracked = true;
             } else {
-                recursion(plain);
+                plain=recursion(plain);
             }
         }
-        return "";
+        return Arrays.deepToString(plain.toArray());
     }
 
     public ArrayList<Integer> recursion (ArrayList<Integer> arr) throws NoSuchAlgorithmException {
@@ -42,22 +46,35 @@ public class BruteForce {
             plainString2 += (char)((int)arr.get(i));
         }
          */
-        int x = arr.size()-1;
 
-        ArrayList<Integer> original= arr;
+        Integer original=-1;
         if (arr.size() > 1) {
+            original= arr.get(0);
+
             arr.remove(0);
             recursion(arr);
+
+        }else if(arr.size()==1){
+            add=true;
         }
-        arr.add(0,original.get(0));
-        if (arr.get(0).equals(126) && add) {
+
+        if (arr.get(0)>126 && add) {
             if (arr.size() == plain.size()) {
-                arr.add(32);
+                arr.add(0,32);
+                arr.set(1,32);
+            }else {
+                arr.set(0, 32);
+                add = false;
             }
-            arr.set(0, 32);
-            add = true;
+
         }else if(add){
             arr.set(0,arr.get(0)+1);
+            add=false;
+        }
+        if (original==-1){
+
+        }else {
+            arr.add(0, original);
         }
         System.out.println(Arrays.deepToString(arr.toArray()));
 

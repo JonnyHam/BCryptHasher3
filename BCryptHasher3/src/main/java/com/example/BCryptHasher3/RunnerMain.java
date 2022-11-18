@@ -15,10 +15,10 @@ public class RunnerMain {
 
         BruteForce test = new BruteForce("df0349ce110b69f03b4def8012ae4970", "MD5");
         ArrayList<Integer> arrTest = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            arrTest.add(i);
+        for (int i = 0; i < 10; i++) {
+            arrTest.add(i+118);
         }
-        test.recursion(arrTest);
+        test.bruteForceAttack();
 
     }
 }
