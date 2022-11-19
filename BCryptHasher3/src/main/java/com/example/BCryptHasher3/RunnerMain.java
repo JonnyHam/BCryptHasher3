@@ -26,7 +26,8 @@ public class RunnerMain {
         BruteForce2 test = new BruteForce2();
         //System.out.println(test.attack("5f3f4681121b460e3304a1887f42f1c3"));
         //System.out.println(test.attack("9145ad2b33c1c38967ddda4619d46f40"));
-        System.out.println(test.attack("e76a383d183d17223550bb1c29189dcf"));
+        //System.out.println(test.attack("e76a383d183d17223550bb1c29189dcf"));
+        System.out.println(test.attack("195f19b835efe9f0b7b4e276ef1a8515"));
 
         /*
         System.out.println((int)('a'));

@@ -28,7 +28,7 @@ public class BruteForce2 {
             } else {
                 for (int i = plain.size()-1; i > -1; i--) {
                     if (plain.get(i) < 126) {
-                        int letter = plain.get(i)+1;
+                        int letter = plain.get(i) + 1;
                         plain.set(i, letter);
                         break;
                     }
@@ -38,7 +38,6 @@ public class BruteForce2 {
                         break;
                     }
                 }
-                //System.out.println(plainString);
             }
         }
         return "end";
