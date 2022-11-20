@@ -37,22 +37,5 @@ public class RunnerMain {
         //Plain text: "p@ss"
         System.out.println(test.attack("195f19b835efe9f0b7b4e276ef1a8515"));
 
-        /*
-        System.out.println((int)('a'));
-        System.out.println((int)('z'));
-
-        for (int i = (int)('a'); i <= (int)('z'); i++) {
-            System.out.println((char)(i));
-        }
-         */
-
-        /*
-        ArrayList<Integer> test = new ArrayList<>();
-        test.add((int)('a'));
-        System.out.println(Arrays.deepToString(test.toArray()));
-        int letter = test.get(0)+1;
-        test.set(0, letter);
-        System.out.println(Arrays.deepToString(test.toArray()));
-         */
     }
 }

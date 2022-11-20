@@ -78,4 +78,22 @@ public class CodeBucket {
             System.out.println(test.checkHash());
         }
         */
+
+    /*
+        System.out.println((int)('a'));
+        System.out.println((int)('z'));
+
+        for (int i = (int)('a'); i <= (int)('z'); i++) {
+            System.out.println((char)(i));
+        }
+         */
+
+        /*
+        ArrayList<Integer> test = new ArrayList<>();
+        test.add((int)('a'));
+        System.out.println(Arrays.deepToString(test.toArray()));
+        int letter = test.get(0)+1;
+        test.set(0, letter);
+        System.out.println(Arrays.deepToString(test.toArray()));
+         */
 }
