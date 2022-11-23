@@ -35,7 +35,6 @@ public class BruteForce2 {
                     plain.set(i, 32);
                     if (i == 0) {
                         plain.add(32);
-                        break;
                     }
                 }
             }
