@@ -1,16 +1,10 @@
 package com.example.BCryptHasher3;
 
-import org.springframework.security.crypto.bcrypt.BCrypt;
-
-public class Bcrypt3 {
+public class BCrypt {
     private String password;
     private String hashedPassword;
 
-    public Bcrypt3 () {
-
-    }
-
-    public Bcrypt3 (String p, String h) {
+    public BCrypt(String p, String h) {
         password = p;
         hashedPassword = h;
     }
@@ -24,7 +18,7 @@ public class Bcrypt3 {
     }
 
     public void hashPassword () {
-        hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt(10));
+        hashedPassword = org.springframework.security.crypto.bcrypt.BCrypt.hashpw(password, org.springframework.security.crypto.bcrypt.BCrypt.gensalt(10));
         //return hashedPassword;
     }
 
@@ -37,6 +31,6 @@ public class Bcrypt3 {
     }
 
     public boolean checkHash () {
-        return BCrypt.checkpw(password, hashedPassword);
+        return org.springframework.security.crypto.bcrypt.BCrypt.checkpw(password, hashedPassword);
     }
 }

@@ -5,6 +5,9 @@ import java.util.*;
 public class RunnerMain {
     public static void main (String[] args) throws Exception {
 
+        //Top 10K Passwords with SHA-256 and MD5
+
+
         /*
         PasswordChecker test = new PasswordChecker("Jonathan Kim");
         //MD5
@@ -23,7 +26,10 @@ public class RunnerMain {
         */
 
 
-        BruteForce2 test = new BruteForce2();
+        //BruteForceAttack with MD5 or SHA-256
+
+
+        //BruteForce2 test = new BruteForce2();
 
         //Plain text: "bat"
         //System.out.println(test.attack("5f3f4681121b460e3304a1887f42f1c3"));
@@ -35,7 +41,28 @@ public class RunnerMain {
         //System.out.println(test.attack("e76a383d183d17223550bb1c29189dcf"));
 
         //Plain text: "p@ss"
-        System.out.println(test.attack("195f19b835efe9f0b7b4e276ef1a8515"));
+        //System.out.println(test.attack("195f19b835efe9f0b7b4e276ef1a8515"));
 
+
+        //Top 10K Passwords with BCrypt
+
+
+        //PasswordChecker test = new PasswordChecker("Jonathan Kim");
+        //System.out.println(test.checkHash("$2a$13$dpCFxCbs7eZARWDvsvs.iuq3y9Jxz6iBbAngwZnoavCzVHtPOg//W"));
+
+        //BCrypt test2 = new BCrypt("password", "$2a$13$dpCFxCbs7eZARWDvsvs.iuq3y9Jxz6iBbAngwZnoavCzVHtPOg//W");
+        //System.out.println(test2.checkHash());
+
+
+        //BruteForceAttack with BCrypt
+
+
+        //BruteForce2 test = new BruteForce2();
+
+        //Plain text: bat
+        //System.out.println(test.attack("$2a$13$wBiwBCL0CaHU9o48Wc40ZOSUoZqYuQqiIXOvkTAyIOOA0QXtMK37y"));
+
+        //Plain text: a
+        //System.out.println(test.attack("$2a$13$I35NPBgZ.8.meKxaltJNPOqqbld1iGW977vn42n652nur7.bGahni"));
     }
 }

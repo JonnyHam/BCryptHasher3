@@ -1,7 +1,4 @@
 package com.example.BCryptHasher3;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.util.*;
 
 public class PasswordChecker {
@@ -17,9 +14,24 @@ public class PasswordChecker {
     }
 
     public String checkHash (String hash) throws Exception {
+        if (hash.substring(0,1).equals("$")) {
+            return checkBCrypt(hash);
+        }
         int i = 0;
         while(i < MD5s.size() && i < SHAs.size()) {
             if (hash.equals(MD5s.get(i)) || hash.equals(SHAs.get(i)))  {
+                return plaintexts.get(i);
+            }
+            i++;
+        }
+        return "end";
+    }
+
+    private String checkBCrypt (String hash) throws Exception {
+        int i = 0;
+        while (i < plaintexts.size()) {
+            BCrypt test = new BCrypt(plaintexts.get(i), hash);
+            if (test.checkHash()) {
                 return plaintexts.get(i);
             }
             i++;
