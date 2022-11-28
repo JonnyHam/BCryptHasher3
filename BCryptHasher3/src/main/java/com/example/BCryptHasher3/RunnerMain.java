@@ -74,7 +74,7 @@ public class RunnerMain {
         ArrayList<String> SHA = new ArrayList<>();
         SHAMD5 test2 = new SHAMD5();
         for (int i = 0; i < words.size(); i++) {
-            MD5.add(test2.encryptString(words.get(i), "MD5");
+            MD5.add(test2.encryptString(words.get(i), "MD5"));
         }
     }
 }
