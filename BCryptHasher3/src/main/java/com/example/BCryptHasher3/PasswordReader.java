@@ -29,10 +29,10 @@ public class PasswordReader {
         return passwords;
     }
 
-    public ArrayList<String> readWords (String user) throws Exception {
+    public ArrayList<String> readWords (String type, String user) throws Exception {
         words = new ArrayList<>();
         File file = new File(
-                "C:\\Users\\" + user + "\\IdeaProjects\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\DictPlain.txt");
+                "C:\\Users\\" + user + "\\IdeaProjects\\BCryptHasher3\\BCryptHasher3\\src\\main\\java\\com\\example\\BCryptHasher3\\Dict" + type + ".txt");
 
         // Note:  Double backquote is to avoid compiler
         // interpret words
@@ -49,7 +49,6 @@ public class PasswordReader {
         while ((st = br.readLine()) != null) {
             words.add(st);
         }
-
         return words;
     }
 

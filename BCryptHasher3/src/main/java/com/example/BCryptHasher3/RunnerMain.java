@@ -66,15 +66,17 @@ public class RunnerMain {
         //System.out.println(test.attack("$2a$13$I35NPBgZ.8.meKxaltJNPOqqbld1iGW977vn42n652nur7.bGahni"));
 
 
-        //Creating SHA and MD5 for dictionary attack
+        //Dictionary Attack
 
-        PasswordReader test = new PasswordReader();
-        ArrayList<String> words = test.readWords("100117545");
-        ArrayList<String> MD5 = new ArrayList<>();
-        ArrayList<String> SHA = new ArrayList<>();
-        SHAMD5 test2 = new SHAMD5();
-        for (int i = 0; i < words.size(); i++) {
-            MD5.add(test2.encryptString(words.get(i), "MD5");
+
+        //Dictionary test = new Dictionary("100117545");
+        //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
+
+        if (args.length > 0) {
+            System.out.println("The command line arguments are: \n" + args.toString());
+        } else {
+            System.out.println("No command line arguments found.");
         }
+
     }
 }

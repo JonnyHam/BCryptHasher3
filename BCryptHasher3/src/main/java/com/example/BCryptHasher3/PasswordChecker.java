@@ -3,14 +3,15 @@ import java.util.*;
 
 public class PasswordChecker {
     private ArrayList<String> plaintexts;
-    private ArrayList<String> MD5s;
-    private ArrayList<String> SHAs;
+
+    private ArrayList<String> md5s;
+    private ArrayList<String> shas;
 
     public PasswordChecker(String user) throws Exception {
         PasswordReader test = new PasswordReader();
         plaintexts = test.readPasswords("Plain", user);
-        MD5s = test.readPasswords("MD5", user);
-        SHAs = test.readPasswords("SHA256", user);
+        md5s = test.readPasswords("MD5", user);
+        shas = test.readPasswords("SHA256", user);
     }
 
     public String checkHash (String hash) throws Exception {
@@ -18,8 +19,8 @@ public class PasswordChecker {
             return checkBCrypt(hash);
         }
         int i = 0;
-        while(i < MD5s.size() && i < SHAs.size()) {
-            if (hash.equals(MD5s.get(i)) || hash.equals(SHAs.get(i)))  {
+        while(i < md5s.size() && i < shas.size()) {
+            if (hash.equals(md5s.get(i)) || hash.equals(shas.get(i)))  {
                 return plaintexts.get(i);
             }
             i++;

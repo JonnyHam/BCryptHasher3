@@ -96,4 +96,19 @@ public class CodeBucket {
         test.set(0, letter);
         System.out.println(Arrays.deepToString(test.toArray()));
          */
+
+    //Creating SHA and MD5 for dictionary attack
+
+        /*
+        PasswordReader test = new PasswordReader();
+        ArrayList<String> words = test.readWords("100117545");
+        ArrayList<String> MD5 = new ArrayList<>();
+        ArrayList<String> SHA = new ArrayList<>();
+        SHAMD5 test2 = new SHAMD5();
+        for (int i = words.size()/2; i < words.size(); i++) {
+            //MD5.add(test2.encryptString(words.get(i), "MD5");
+            //SHA.add(test2.encryptString(words.get(i),"MD5") );
+            System.out.println(test2.encryptString(words.get(i), "SHA-256"));
+        }
+        */
 }
