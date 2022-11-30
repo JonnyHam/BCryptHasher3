@@ -69,14 +69,18 @@ public class RunnerMain {
         //Dictionary Attack
 
 
-        //Dictionary test = new Dictionary("100117545");
+        //Dictionary test = new Dictionary("Jonathan Kim");
+
+        //Plain text: acne
         //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
 
+        /*
         if (args.length > 0) {
             System.out.println("The command line arguments are: \n" + args.toString());
         } else {
             System.out.println("No command line arguments found.");
         }
+         */
 
     }
 }
