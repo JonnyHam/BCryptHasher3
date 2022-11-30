@@ -74,13 +74,21 @@ public class RunnerMain {
         //Plain text: acne
         //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
 
-        /*
+
         if (args.length > 0) {
-            System.out.println("The command line arguments are: \n" + args.toString());
+            System.out.println("The command line arguments are: \n" + Arrays.toString(args));
+            if (args.length == 3) {
+                if (args[1].equals("Dict")) {
+                    Dictionary test = new Dictionary(args[2]);
+                    System.out.println(test.checkEnglish(args[0]));
+                }
+            } else {
+                System.out.println("Needs 2 argument");
+            }
         } else {
             System.out.println("No command line arguments found.");
+
         }
-         */
 
     }
 }
