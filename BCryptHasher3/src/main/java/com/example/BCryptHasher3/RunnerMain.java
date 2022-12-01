@@ -2,7 +2,10 @@ package com.example.BCryptHasher3;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
+
 public class RunnerMain {
+    private String pass;
+    private static String passType;
     public static void main (String[] args) throws Exception {
 
         //Top 10K Passwords with SHA-256 and MD5
@@ -73,14 +76,21 @@ public class RunnerMain {
 
         //Plain text: acne
         //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
+        passType = "Dict";
 
-
+        args = new String[3];
+        args[0] = "4124bc0a9335c27f086f24ba207a4912";
+        args[1] = "Brute";
+        args[2] = "100117545";
         if (args.length > 0) {
             System.out.println("The command line arguments are: \n" + Arrays.toString(args));
             if (args.length == 3) {
-                if (args[1].equals("Dict")) {
-                    Dictionary test = new Dictionary(args[2]);
-                    System.out.println(test.checkEnglish(args[0]));
+                if (passType.equals("Dict")) {
+                    Dictionary test = new Dictionary("" + args[2]);
+                    System.out.println(test.checkEnglish("" + args[0]));
+                } else if (args[1].equals("Brute")) {
+                    BruteForce2 test = new BruteForce2();
+                    System.out.println(test.attack(args[0]));
                 }
             } else {
                 System.out.println("Needs 2 argument");
