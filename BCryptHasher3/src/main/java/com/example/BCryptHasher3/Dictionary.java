@@ -7,6 +7,7 @@ public class Dictionary {
     private ArrayList<String> md5s;
     private ArrayList<String> shas;
 
+
     public Dictionary(String user) throws Exception {
         PasswordReader test = new PasswordReader();
         words = test.readWords("Plain", user);
