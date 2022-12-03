@@ -4,7 +4,7 @@ second argument: method of password cracking (accepted: Dict, Brute, 10K)
 
 third argument: Username
 
-Use this command to get started: PS C:\Users\Jonathan Kim\IdeaProjects\BCryptHasher3\BCryptHasher3> java -jar BCryptHasher3.jar
+Use this command to get started: PS C:\Users\Jonathan Kim\IdeaProjects\BCryptHasher3\out\artifacts\BCryptHasher3_Jar> java -jar BCryptHasher3.jar
 
 *One thing to note:
     the command, 'java' doesn't work with Windows Powershell by default. In order to make it work, you need add 'JAVA_HOME'
