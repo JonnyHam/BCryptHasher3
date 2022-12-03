@@ -22,7 +22,7 @@ public class Dictionary {
         int i = 0;
         while(i < md5s.size() && i < shas.size()) {
             if (hash.equals(md5s.get(i)) || hash.equals(shas.get(i)))  {
-                return words.get(i);
+                return "Cracked Hash: " + words.get(i);
             }
             i++;
         }
@@ -33,7 +33,7 @@ public class Dictionary {
         while (i < words.size()) {
             BCrypt test = new BCrypt(words.get(i), hash);
             if (test.checkHash()) {
-                return words.get(i);
+                return "Cracked Hash: " + words.get(i);
             }
             i++;
         }

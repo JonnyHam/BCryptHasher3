@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Main-Class: com.example.BCryptHasher3.RunnerMain
-Class-Path: slf4j-api-1.7.36.jar spring-jcl-5.3.23.jar spring-security-w
- eb-5.7.4.jar jakarta.xml.bind-api-2.3.3.jar spring-boot-starter-securit
- y-2.7.5.jar logback-core-1.2.11.jar spring-aop-5.3.23.jar spring-web-5.
- 3.23.jar spring-context-5.3.23.jar log4j-to-slf4j-2.17.2.jar spring-boo
- t-2.7.5.jar jakarta.annotation-api-1.3.5.jar spring-boot-autoconfigure-
- 2.7.5.jar spring-core-5.3.23.jar spring-beans-5.3.23.jar spring-securit
- y-crypto-5.7.4.jar jul-to-slf4j-1.7.36.jar spring-expression-5.3.23.jar
-  spring-security-config-5.7.4.jar spring-boot-starter-logging-2.7.5.jar
-  spring-security-core-5.7.4.jar jakarta.activation-api-1.2.2.jar spring
- -boot-starter-2.7.5.jar snakeyaml-1.30.jar logback-classic-1.2.11.jar l
- og4j-api-2.17.2.jar
+Class-Path: jakarta.annotation-api-1.3.5.jar spring-security-core-5.7.4.
+ jar spring-jcl-5.3.23.jar log4j-api-2.17.2.jar spring-expression-5.3.23
+ .jar jakarta.activation-api-1.2.2.jar log4j-to-slf4j-2.17.2.jar spring-
+ boot-starter-security-2.7.5.jar jakarta.xml.bind-api-2.3.3.jar spring-s
+ ecurity-web-5.7.4.jar spring-context-5.3.23.jar jul-to-slf4j-1.7.36.jar
+  logback-classic-1.2.11.jar spring-boot-autoconfigure-2.7.5.jar spring-
+ web-5.3.23.jar spring-security-crypto-5.7.4.jar spring-security-config-
+ 5.7.4.jar snakeyaml-1.30.jar spring-boot-starter-logging-2.7.5.jar slf4
+ j-api-1.7.36.jar spring-aop-5.3.23.jar logback-core-1.2.11.jar spring-b
+ eans-5.3.23.jar spring-boot-starter-2.7.5.jar spring-boot-2.7.5.jar spr
+ ing-core-5.3.23.jar
 

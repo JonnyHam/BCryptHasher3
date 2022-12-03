@@ -79,18 +79,17 @@ public class RunnerMain {
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("enter a hash");
-        String hash = keyboard.next();
-        System.out.println("enter type of attack you want (10K , Brute , Dict");
-        String type = keyboard.next();
+        String hash = keyboard.nextLine();
+        System.out.println("enter type of attack you want (10K , Brute , Dict)");
+        String type = keyboard.nextLine();
         System.out.println("enter user");
-        String user = keyboard.next();
+        String user = keyboard.nextLine();
         args = new String[3];
         args[0] = hash;
         args[1] = type;
         args[2] = user;
         if (args.length > 0) {
             System.out.println("The command line arguments are: \n" + Arrays.toString(args));
-            System.out.println("hi");
             if (args.length == 3) {
                 if (args[1].equals("Dict")) {
                     Dictionary test = new Dictionary(args[2]);

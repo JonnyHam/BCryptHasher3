@@ -21,7 +21,7 @@ public class PasswordChecker {
         int i = 0;
         while(i < md5s.size() && i < shas.size()) {
             if (hash.equals(md5s.get(i)) || hash.equals(shas.get(i)))  {
-                return plaintexts.get(i);
+                return "Cracked Hash: " + plaintexts.get(i);
             }
             i++;
         }
@@ -33,7 +33,7 @@ public class PasswordChecker {
         while (i < plaintexts.size()) {
             BCrypt test = new BCrypt(plaintexts.get(i), hash);
             if (test.checkHash()) {
-                return plaintexts.get(i);
+                return "Cracked Hash: " + plaintexts.get(i);
             }
             i++;
         }
