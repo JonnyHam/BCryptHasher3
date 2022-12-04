@@ -9,3 +9,5 @@ Use this command to get started: PS C:\Users\Jonathan Kim\IdeaProjects\BCryptHas
 *One thing to note:
     the command, 'java' doesn't work with Windows Powershell by default. In order to make it work, you need add 'JAVA_HOME'
     as an environment variable. To do this, follow this tutorial: https://mkyong.com/java/how-to-set-java_home-on-windows-10/
+
+Dependencies: Spring Security
