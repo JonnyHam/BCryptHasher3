@@ -25,7 +25,7 @@ public class PasswordChecker {
             }
             i++;
         }
-        return "end";
+        return "Hash not Found in Database";
     }
 
     private String checkBCrypt (String hash) throws Exception {
@@ -37,7 +37,7 @@ public class PasswordChecker {
             }
             i++;
         }
-        return "end";
+        return "Hash not Found in Database";
     }
 
 }

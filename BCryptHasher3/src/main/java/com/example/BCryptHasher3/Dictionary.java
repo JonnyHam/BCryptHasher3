@@ -26,7 +26,7 @@ public class Dictionary {
             }
             i++;
         }
-        return "end";
+        return "Hash not Found in Database";
     }
     private String checkEnglishBCrypt (String hash) {
         int i = 0;
@@ -37,6 +37,6 @@ public class Dictionary {
             }
             i++;
         }
-        return "end";
+        return "Hash not Found in Database";
     }
 }
