@@ -1,6 +1,5 @@
 package com.example.BCryptHasher3;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class RunnerMain {
@@ -77,29 +76,38 @@ public class RunnerMain {
         //Plain text: acne
         //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
 
+        System.out.println("The arguments are: " + Arrays.toString(args));
+
+        /*
         Scanner keyboard = new Scanner(System.in);
+
         System.out.println("enter a hash");
         String hash = keyboard.nextLine();
         System.out.println("enter type of attack you want (10K , Brute , Dict)");
         String type = keyboard.nextLine();
         System.out.println("enter user");
         String user = keyboard.nextLine();
-        args = new String[3];
-        args[0] = hash;
-        args[1] = type;
-        args[2] = user;
+        */
+        //args = new String[2];
+        System.out.println(args[1]);
+        if(args[1].length()>6){
+            String temp=args[1];
+            args[1]=args[0];
+            args[0]=temp;
+        }
+
         if (args.length > 0) {
             System.out.println("The command line arguments are: \n" + Arrays.toString(args));
-            if (args.length == 3) {
+            if (args.length == 2) {
                 if (args[1].equals("Dict")) {
-                    Dictionary test = new Dictionary(args[2]);
+                    Dictionary test = new Dictionary();
 
                     System.out.println(test.checkEnglish(args[0]));
                 } else if (args[1].equals("Brute")) {
                     BruteForce2 test = new BruteForce2();
                     System.out.println(test.attack(args[0]));
                 } else if (args[1].equals("10K")) {
-                    PasswordChecker test = new PasswordChecker(args[2]);
+                    PasswordChecker test = new PasswordChecker();
                     System.out.println(test.checkHash(args[0]));
                 } else {
                     System.out.println("Error with arguments");

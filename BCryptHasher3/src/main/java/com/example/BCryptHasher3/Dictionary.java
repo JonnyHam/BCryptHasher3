@@ -8,11 +8,11 @@ public class Dictionary {
     private ArrayList<String> shas;
 
 
-    public Dictionary(String user) throws Exception {
+    public Dictionary() throws Exception {
         PasswordReader test = new PasswordReader();
-        words = test.readWords("Plain", user);
-        md5s = test.readWords("MD5", user);
-        shas = test.readWords("SHA256", user);
+        words = test.readWords("Plain");
+        md5s = test.readWords("MD5");
+        shas = test.readWords("SHA256");
     }
     public String checkEnglish (String hash) {
         if (hash.substring(0,1).equals("$")) {
