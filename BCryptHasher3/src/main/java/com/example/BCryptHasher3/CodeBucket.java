@@ -172,6 +172,29 @@ public class CodeBucket {
     //Plain text: acne
     //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
 
+    //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
+
+    //System.out.println("The arguments are: " + Arrays.toString(args));
+
+        /*
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("enter a hash");
+        String hash = keyboard.nextLine();
+        System.out.println("enter type of attack you want (10K , Brute , Dict)");
+        String type = keyboard.nextLine();
+        System.out.println("enter user");
+        String user = keyboard.nextLine();
+        */
+    //args = new String[2];
+        /*
+        System.out.println(args[1]);
+        if(args[1].length()>6){
+            String temp=args[1];
+            args[1]=args[0];
+            args[0]=temp;
+        }
+         */
 
     //Creating SHA and MD5 for dictionary attack
 

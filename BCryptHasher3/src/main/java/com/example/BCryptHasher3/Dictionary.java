@@ -2,6 +2,7 @@ package com.example.BCryptHasher3;
 
 import java.util.*;
 
+//DOES THE SAME THING AS PasswordChecker BUT CHECKS Dict txt files
 public class Dictionary {
     private ArrayList<String> words;
     private ArrayList<String> md5s;

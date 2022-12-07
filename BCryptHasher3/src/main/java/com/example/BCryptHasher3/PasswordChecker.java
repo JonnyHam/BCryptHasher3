@@ -7,6 +7,7 @@ public class PasswordChecker {
     private ArrayList<String> md5s;
     private ArrayList<String> shas;
 
+    //Configures PasswordChecker by running PasswordReader for each local variable.
     public PasswordChecker() throws Exception {
         PasswordReader test = new PasswordReader();
         plaintexts = test.readPasswords("Plain");
@@ -14,6 +15,7 @@ public class PasswordChecker {
         shas = test.readPasswords("SHA256");
     }
 
+    //Checks if shas or md5s has hash inputted from parameter in txt file.
     public String checkHash (String hash) throws Exception {
         if (hash.substring(0,1).equals("$")) {
             return checkBCrypt(hash);
@@ -28,6 +30,7 @@ public class PasswordChecker {
         return "Hash not Found in Database";
     }
 
+    //Same thing has checkHash but only checks if BCrypt equals one of the plaintexts.
     private String checkBCrypt (String hash) throws Exception {
         int i = 0;
         while (i < plaintexts.size()) {

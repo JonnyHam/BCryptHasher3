@@ -6,6 +6,8 @@ import java.security.NoSuchAlgorithmException;
 
 
 public class SHAMD5 {
+
+    //This method encrypts plaintext into either SHA-256 or MD5 hash (depending on type)
     public String encryptString (String input, String type) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance(type);
         byte[] messageDigest = md.digest(input.getBytes());
@@ -13,20 +15,8 @@ public class SHAMD5 {
         return bigInt.toString(16);
     }
 
+    //This method checks to see whether a plaintext and hash is the same.
     public boolean checkString (String password, String type, String hashedPassword) throws NoSuchAlgorithmException {
-        //System.out.println(this.encryptString(password, type));
         return hashedPassword.equals(this.encryptString(password, type));
     }
-    /*
-    public static void main(String[] args) throws NoSuchAlgorithmException {
-        MD5 encryptor = new MD5();
-
-        String password = "monkey123";
-        String type = "MD5";
-
-        String hashedPassword = encryptor.encryptString(password, type);
-        System.out.println(hashedPassword);
-        System.out.println(encryptor.checkString(password, type, hashedPassword));
-    }
-     */
 }

@@ -5,6 +5,8 @@ import java.util.*;
 public class PasswordReader {
     private ArrayList<String> passwords;
     private ArrayList<String> words;
+
+    //Reads MD5, SHA-256, and plaintext top 10K passwords and outputs array with them.
     public ArrayList<String> readPasswords(String type) throws Exception {
         passwords = new ArrayList<>();
         String username = System.getProperty("user.name");
@@ -30,6 +32,7 @@ public class PasswordReader {
         return passwords;
     }
 
+    //Reads MD5, SHA-256, and plaintext 25322 words in English language and outputs array with them.
     public ArrayList<String> readWords(String type) throws Exception {
         words = new ArrayList<>();
         String username = System.getProperty("user.name");
