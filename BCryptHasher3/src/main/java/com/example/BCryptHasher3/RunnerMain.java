@@ -76,7 +76,7 @@ public class RunnerMain {
         //Plain text: acne
         //System.out.println(test.checkEnglish("$2a$13$/PrEp5eK5ekr3/pyPRko7OIjuJnXrPQKljAEcpGj/Pk8jCTnc60su"));
 
-        System.out.println("The arguments are: " + Arrays.toString(args));
+        //System.out.println("The arguments are: " + Arrays.toString(args));
 
         /*
         Scanner keyboard = new Scanner(System.in);
@@ -89,26 +89,27 @@ public class RunnerMain {
         String user = keyboard.nextLine();
         */
         //args = new String[2];
+        /*
         System.out.println(args[1]);
         if(args[1].length()>6){
             String temp=args[1];
             args[1]=args[0];
             args[0]=temp;
         }
-
+         */
         if (args.length > 0) {
-            System.out.println("The command line arguments are: \n" + Arrays.toString(args));
+            //System.out.println("The command line arguments are: \n" + Arrays.toString(args));
             if (args.length == 2) {
-                if (args[1].equals("Dict")) {
+                if (args[0].equals("-dict")) {
                     Dictionary test = new Dictionary();
 
-                    System.out.println(test.checkEnglish(args[0]));
-                } else if (args[1].equals("Brute")) {
+                    System.out.println(test.checkEnglish(args[1]));
+                } else if (args[0].equals("-brute")) {
                     BruteForce2 test = new BruteForce2();
-                    System.out.println(test.attack(args[0]));
-                } else if (args[1].equals("10K")) {
+                    System.out.println(test.attack(args[1]));
+                } else if (args[0].equals("-tenk")) {
                     PasswordChecker test = new PasswordChecker();
-                    System.out.println(test.checkHash(args[0]));
+                    System.out.println(test.checkHash(args[1]));
                 } else {
                     System.out.println("Error with arguments");
                 }
