@@ -59,6 +59,8 @@ public class BruteForce2 {
 
     //Does the same thing as above but for BCrypt (which is a lot slower :() )
     private String attackBCrypt () {
+        System.out.println("Warning: BCrypt Detected with Brute Force attack. This will take a while >:)");
+        boolean isLarge = false;
         while (!cracked) {
             plainString = "";
             for (int i = 0; i < plain.size(); i++) {
@@ -79,6 +81,10 @@ public class BruteForce2 {
                     if (i == 0) {
                         plain.add(32);
                     }
+                }
+                if (plain.size() > 3 && !isLarge) {
+                    isLarge = true;
+                    System.out.println("Warning: BCrypt password is more than 3 characters");
                 }
             }
         }

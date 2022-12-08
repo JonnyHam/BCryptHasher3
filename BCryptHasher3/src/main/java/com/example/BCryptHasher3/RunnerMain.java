@@ -9,7 +9,7 @@ public class RunnerMain {
 
 
         if (args.length > 0) {
-            //System.out.println("The command line arguments are: \n" + Arrays.toString(args));
+            System.out.println("The command line arguments are: \n" + Arrays.toString(args));
             if (args.length == 2) {
                 if (args[0].equals("-dict")) {
                     Dictionary test = new Dictionary();
