@@ -23,6 +23,7 @@ public class RunnerMain {
                     args[1]=temp;
                 }
 
+                //Starts timer
                 long startTime = System.currentTimeMillis();
 
                 //Checks argument and calls corresponding attack.
@@ -42,6 +43,7 @@ public class RunnerMain {
                     System.out.println("Error with arguments");
                 }
 
+                //Calculates elapsed time after program ends
                 long elapsedTime = System.currentTimeMillis() - startTime;
                 System.out.println("Elapsed Time: " + elapsedTime + " milliseconds");
             } else {
