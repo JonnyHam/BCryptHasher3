@@ -3,14 +3,27 @@ package com.example.BCryptHasher3;
 import java.util.*;
 
 public class RunnerMain {
-    private String pass;
-    private static String passType;
+
+    //main method
     public static void main (String[] args) throws Exception {
 
-
+        //Checks to see if there are arguments
         if (args.length > 0) {
+
+            //Lists arguments
             System.out.println("The command line arguments are: \n" + Arrays.toString(args));
+
+            //Checks for correct number of arguments
             if (args.length == 2) {
+
+                //Puts arguments in correct order for program
+                if(args[0].length()>6){
+                    String temp=args[0];
+                    args[0]=args[1];
+                    args[1]=temp;
+                }
+
+                //Checks argument and calls corresponding attack.
                 if (args[0].equals("-dict")) {
                     Dictionary test = new Dictionary();
 
@@ -22,6 +35,8 @@ public class RunnerMain {
                     PasswordChecker test = new PasswordChecker();
                     System.out.println(test.checkHash(args[1]));
                 } else {
+
+                    //Error messages bellow:
                     System.out.println("Error with arguments");
                 }
             } else {
