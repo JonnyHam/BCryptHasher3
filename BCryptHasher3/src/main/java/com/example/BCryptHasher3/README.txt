@@ -18,4 +18,10 @@ Example command:
     If using BCrypt hash, enclose hash with this: ''
         Ex: java -jar BCryptHasher3.jar -brute '$2a$04$jnGpDHAyqnJCe90dZvMYaOxM0sX7oPUX4F0jZGA2TMdN9KnjMSDRK'
 
+*Time saved using dictionary attack instead of brute force attack:
+    Word used: 'bat'
+    Brute force attack: ~1950 milliseconds
+    Dictionary attack: ~50 milliseconds
+        ~1900 milliseconds saved
+
 Dependencies: Spring Security

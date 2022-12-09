@@ -23,6 +23,8 @@ public class RunnerMain {
                     args[1]=temp;
                 }
 
+                long startTime = System.currentTimeMillis();
+
                 //Checks argument and calls corresponding attack.
                 if (args[0].equals("-dict")) {
                     Dictionary test = new Dictionary();
@@ -39,6 +41,9 @@ public class RunnerMain {
                     //Error messages bellow:
                     System.out.println("Error with arguments");
                 }
+
+                long elapsedTime = System.currentTimeMillis() - startTime;
+                System.out.println("Elapsed Time: " + elapsedTime + " milliseconds");
             } else {
                 System.out.println("Needs 2 arguments");
             }
